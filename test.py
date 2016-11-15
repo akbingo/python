@@ -17,3 +17,17 @@ elif 28<=BMI<32:
     print("肥胖")
 else:
     print("严重肥胖")
+
+sum=0
+x=1
+while x<100:
+    sum=sum+x
+    x=x+2
+print(sum)
+
+sum=0
+x=1
+while x<100:
+    x=x+2
+    sum=sum+x
+print(sum)
