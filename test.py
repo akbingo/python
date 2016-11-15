@@ -31,3 +31,6 @@ while x<100:
     x=x+2
     sum=sum+x
 print(sum)
+
+for x in (255,1000):
+    print(hex(x))
