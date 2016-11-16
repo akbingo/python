@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+print("tuple")
 print(("S1"))
-print(("S1",))
+print(("S1",),"\n")
 
+print("条件判断")
 height=1.75
 weight=80.5
 BMI=weight/(height*height)
@@ -17,7 +19,9 @@ elif 28<=BMI<32:
     print("肥胖")
 else:
     print("严重肥胖")
+print("\n")
 
+print("循环")
 sum=0
 x=1
 while x<100:
@@ -30,7 +34,25 @@ x=1
 while x<100:
     x=x+2
     sum=sum+x
-print(sum)
+print(sum,"\n")
 
+print("调用函数")
 for x in (255,1000):
     print(hex(x))
+print("\n")
+
+print("定义函数")
+import math
+def quadratic(a,b,c):
+    if a==0:
+        return (-c)/b
+    if a != 0:
+        s=b*b-4*a*c
+        if s>0:
+            return (-b+math.sqrt(s))/(2*a),(-b-math.sqrt(s))/(2*a)
+        elif s==0:
+            return (-b)/(2*a)
+        else:
+            pass
+print(quadratic(2,3,1))
+print(quadratic(1,3,-4),"\n")
