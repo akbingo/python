@@ -56,3 +56,15 @@ def quadratic(a,b,c):
             pass
 print(quadratic(2,3,1))
 print(quadratic(1,3,-4),"\n")
+
+#汉诺塔的移动
+print("递归函数")
+def move(n,a,b,c):
+    if n==1:
+        print(a,"-->",c)
+    else:
+        move(n-1,a,c,b)
+        move(1,a,b,c)
+        move(n-1,b,a,c)
+    return "\t"
+print(move(3,"A","B","C"))
