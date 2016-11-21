@@ -72,4 +72,21 @@ print(move(3,"A","B","C"))
 print("列表生成式")
 L1=["IBM","iPhone",69,"Hello",None]
 print([l.lower()  for l in L1  if isinstance(l,str)==True])
-print([l.lower  for l in L1  if isinstance(l,str)==True])
+print([l.lower  for l in L1  if isinstance(l,str)==True],"\n")
+
+#杨辉三角
+print("生成器")
+def triangles():
+    a=[1]
+    while True:
+        yield a
+        v=[0]+a[:]
+        a=[a[x]+v[x]  for x in range(len(a))]+[1]
+        
+x=0
+for n in triangles():
+    print(n)
+    x=x+1
+    if x==10:
+        break
+print("\t")
