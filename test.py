@@ -68,3 +68,8 @@ def move(n,a,b,c):
         move(n-1,b,a,c)
     return "\t"
 print(move(3,"A","B","C"))
+
+print("列表生成式")
+L1=["IBM","iPhone",69,"Hello",None]
+print([l.lower()  for l in L1  if isinstance(l,str)==True])
+print([l.lower  for l in L1  if isinstance(l,str)==True])
