@@ -9,13 +9,14 @@ print("条件判断")
 height=1.75
 weight=80.5
 BMI=weight/(height*height)
+print("你的BMI是",BMI)
 if BMI<18.5:
     print("过轻")
-elif 18.5<=BMI<25:
+elif BMI<25:
     print("正常")
-elif 25<=BMI<28:
+elif BMI<28:
     print("过重")
-elif 28<=BMI<32:
+elif BMI<32:
     print("肥胖")
 else:
     print("严重肥胖")
@@ -89,4 +90,23 @@ for n in triangles():
     x=x+1
     if x==10:
         break
+print("\t")
+
+print("高阶函数:map/reduce")
+#利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。
+L1=["adam","LISA","barT"]
+def normalize(name):
+    return name.title()
+print(list(map(normalize,L1)))
+#编写一个prod()函数，可以接受一个list并利用reduce()求积：
+from functools import reduce
+def prod(L):
+    return reduce(akb,L)
+def akb(x,y):
+    return x*y
+print("3*5*7*9=",prod([3,5,7,9]))
+
+#利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456：
+def str2float(s):
+    pass
 print("\t")
