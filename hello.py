@@ -114,3 +114,17 @@ print("\t")
 print("高阶函数:filter")
 #回数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()滤掉非回数：
 print(list(filter(lambda n : str(n)==str(n)[::-1],range(1,1000))),"\n")
+
+print("高阶函数:sorted")
+L=[("Bob",75),("Adam",92),("Bart",66),("Lisa",88)]
+#请用sorted()对上述列表分别按名字排序：
+print(sorted(L))
+def akb(t):
+    return t[0]
+print(sorted(L, key=akb))
+#再按成绩从高到低排序：
+def ske(t):
+    return t[1]
+print(sorted(L, key=ske))
+print(sorted(L, key=ske, reverse=True),"\n")
+
