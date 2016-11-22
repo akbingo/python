@@ -110,3 +110,7 @@ print("3*5*7*9=",prod([3,5,7,9]))
 def str2float(s):
     pass
 print("\t")
+
+print("高阶函数:filter")
+#回数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()滤掉非回数：
+print(list(filter(lambda n : str(n)==str(n)[::-1],range(1,1000))),"\n")
