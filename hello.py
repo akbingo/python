@@ -128,3 +128,48 @@ def ske(t):
 print(sorted(L, key=ske))
 print(sorted(L, key=ske, reverse=True),"\n")
 
+print("装饰器")
+import functools
+#请编写一个decorator，能在函数调用的前后打印出'begin call'和'end call'的日志。
+def akb(idol):
+    @functools.wraps(idol)
+    def ske(*args,**kw):
+        print("begin call")
+        print(idol(*args,**kw))
+        return "end call"
+    return ske
+@akb
+def kawaii(x,y):
+    return x+y
+print(kawaii(4,8))
+print("\t")
+
+#写出一个@log的decorator，使它支持两种方式使用
+def akb(fan):
+    if isinstance(fan,str):
+        def ske(idol):
+            @functools.wraps(idol)
+            def nmb(*args,**kw):
+                print("Thank %s!" % fan)
+                return idol(*args,**kw)
+            return nmb
+        return ske
+
+    else:
+        @functools.wraps(fan)
+        def ske(*args,**kw):
+            print("Thanks!")
+            return fan(*args,**kw)
+        return ske
+
+@akb
+def kawaii(x,y):
+    return x+y
+print(kawaii(4,8))
+
+@akb("akbingo")
+def kawaii(x,y):
+    return x+y
+print(kawaii(4,8))
+print("\n")
+
