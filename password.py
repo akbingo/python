@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"这个模块可以生成10组密码。"
+
+__author__=". ./akb"
+
 import random
 import string
 length=int(input("请输入你需要的密码位数："))
