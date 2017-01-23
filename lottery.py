@@ -17,8 +17,6 @@ def akb():
                     hkt=1
         if hkt==0:
             ske.append(nmb)
-    return sorted(ske)+[random.randint(1,16)]
+    return sorted(ske)
 if __name__=="__main__":
-	ngt=akb()	
-	print("%d,%d,%d,%d,%d,%d+%d"%(ngt[0],ngt[1],ngt[2],ngt[3],ngt[4],ngt[5],ngt[6]))
-		
+    print(akb(),"+",random.randint(1,16))
